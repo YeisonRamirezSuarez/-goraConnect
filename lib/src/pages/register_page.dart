@@ -1,11 +1,15 @@
-import 'package:chat_app/src/helpers/mostrar_alerta.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:chat_app/src/services/auth_service.dart';
+
+import 'package:chat_app/src/helpers/mostrar_alerta.dart';
+import 'package:chat_app/src/services/socket_service.dart';
+
 import 'package:chat_app/src/widgets/boton_negro.dart';
 import 'package:chat_app/src/widgets/custom_input.dart';
 import 'package:chat_app/src/widgets/laberls.dart';
 import 'package:chat_app/src/widgets/logo.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class RegisterPage extends StatelessWidget {
   @override
@@ -53,6 +57,8 @@ class __FormState extends State<_Form> {
   @override
   Widget build(BuildContext context) {
     final authService = Provider.of<AuthService>(context);
+    final socketService = Provider.of<SocketService>(context);
+
     return Container(
       margin: const EdgeInsets.only(top: 40),
       padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -87,6 +93,7 @@ class __FormState extends State<_Form> {
                       passCtrl.text.trim());
 
                   if (registerOk) {
+                    socketService.connect();
                     Navigator.pushReplacementNamed(context, 'users');
                   } else {
                     mostrarAlerta(
