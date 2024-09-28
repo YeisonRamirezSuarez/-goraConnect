@@ -1,8 +1,11 @@
+import 'package:chat_app/src/helpers/mostrar_alerta.dart';
+import 'package:chat_app/src/services/auth_service.dart';
 import 'package:chat_app/src/widgets/boton_negro.dart';
 import 'package:chat_app/src/widgets/custom_input.dart';
 import 'package:chat_app/src/widgets/laberls.dart';
 import 'package:chat_app/src/widgets/logo.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -17,12 +20,15 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Logo(title: 'Login',),
+                  Logo(
+                    title: 'Login',
+                  ),
                   _Form(),
                   Labels(
                     title: '¿No tienes una cuenta?',
                     subtitle: 'Crea una ahora!',
-                    ruta: 'register',),
+                    ruta: 'register',
+                  ),
                   TerminosCondiciones(),
                 ],
               ),
@@ -45,6 +51,8 @@ class __FormState extends State<_Form> {
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
+
     return Container(
       margin: const EdgeInsets.only(top: 40),
       padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -62,11 +70,21 @@ class __FormState extends State<_Form> {
           isPassword: true,
         ),
         BotonNegro(
-          text: 'Ingrese',
-          onPressed: () {
-            print('email: ${emailCtrl.text} - password: ${passCtrl.text}');
-          },
-        )
+            text: 'Ingrese',
+            onPressed: authService.autenticando
+                ? null
+                : () async {
+                    FocusScope.of(context).unfocus();
+                    final loginOk = await authService.login(
+                        emailCtrl.text.trim(), passCtrl.text.trim());
+
+                    if (loginOk) {
+                      Navigator.pushReplacementNamed(context, 'users');
+                    } else {
+                      mostrarAlerta(context, 'Login incorrecto',
+                          'Revise sus credenciales');
+                    }
+                  })
       ]),
     );
   }
