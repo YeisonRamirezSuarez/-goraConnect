@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:chat_app/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
 
-import 'package:chat_app/src/helpers/mostrar_alerta.dart';
-import 'package:chat_app/src/services/socket_service.dart';
+import 'package:AgoraConnect/src/helpers/mostrar_alerta.dart';
+import 'package:AgoraConnect/src/services/socket_service.dart';
 
-import 'package:chat_app/src/widgets/boton_negro.dart';
-import 'package:chat_app/src/widgets/custom_input.dart';
-import 'package:chat_app/src/widgets/laberls.dart';
-import 'package:chat_app/src/widgets/logo.dart';
+import 'package:AgoraConnect/src/widgets/boton_negro.dart';
+import 'package:AgoraConnect/src/widgets/custom_input.dart';
+import 'package:AgoraConnect/src/widgets/laberls.dart';
+import 'package:AgoraConnect/src/widgets/logo.dart';
 
 class RegisterPage extends StatelessWidget {
   @override

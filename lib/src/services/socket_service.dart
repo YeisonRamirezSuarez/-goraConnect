@@ -1,5 +1,5 @@
-import 'package:chat_app/src/global/environment.dart';
-import 'package:chat_app/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/global/environment.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 

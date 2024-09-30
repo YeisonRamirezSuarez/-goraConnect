@@ -1,4 +1,4 @@
-# chat_app
+# AgoraConnect
 
 A new Flutter project.
 

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:chat_app/src/models/usuario.dart';
+import 'package:AgoraConnect/src/models/usuario.dart';
 
 UsuariosResponse usuariosResponseFromJson(String str) => UsuariosResponse.fromJson(json.decode(str));
 

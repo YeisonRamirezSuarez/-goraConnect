@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
-import 'package:chat_app/src/services/usuarios_service.dart';
-import 'package:chat_app/src/services/auth_service.dart';
-import 'package:chat_app/src/services/socket_service.dart';
-import 'package:chat_app/src/services/chat_service.dart';
+import 'package:AgoraConnect/src/services/usuarios_service.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/services/socket_service.dart';
+import 'package:AgoraConnect/src/services/chat_service.dart';
 
-import 'package:chat_app/src/models/usuario.dart';
+import 'package:AgoraConnect/src/models/usuario.dart';
 
 class UsuariosPage extends StatefulWidget {
   @override

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:chat_app/src/services/auth_service.dart';
-import 'package:chat_app/src/services/socket_service.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/services/socket_service.dart';
 
-import 'package:chat_app/src/pages/usuarios_page.dart';
+import 'package:AgoraConnect/src/pages/usuarios_page.dart';
 
 class LoadingPage extends StatelessWidget {
 

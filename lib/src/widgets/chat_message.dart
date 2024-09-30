@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:chat_app/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
 
 class ChatMessage extends StatelessWidget {
 

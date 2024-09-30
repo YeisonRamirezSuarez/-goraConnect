@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:chat_app/src/services/chat_service.dart';
-import 'package:chat_app/src/services/socket_service.dart';
-import 'package:chat_app/src/services/auth_service.dart';
-import 'package:chat_app/src/widgets/chat_message.dart';
+import 'package:AgoraConnect/src/services/chat_service.dart';
+import 'package:AgoraConnect/src/services/socket_service.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/widgets/chat_message.dart';
 
-import 'package:chat_app/src/models/mensajes_response.dart';
+import 'package:AgoraConnect/src/models/mensajes_response.dart';
 
 class ChatPage extends StatefulWidget {
   @override

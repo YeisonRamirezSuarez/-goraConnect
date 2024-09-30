@@ -3,9 +3,9 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:chat_app/src/global/environment.dart';
-import 'package:chat_app/src/models/login_response.dart';
-import 'package:chat_app/src/models/usuario.dart';
+import 'package:AgoraConnect/src/global/environment.dart';
+import 'package:AgoraConnect/src/models/login_response.dart';
+import 'package:AgoraConnect/src/models/usuario.dart';
 
 class AuthService with ChangeNotifier {
   Usuario? usuario;

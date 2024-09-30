@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:chat_app/src/services/auth_service.dart';
-import 'package:chat_app/src/services/socket_service.dart';
-import 'package:chat_app/src/services/chat_service.dart';
+import 'package:AgoraConnect/src/services/auth_service.dart';
+import 'package:AgoraConnect/src/services/socket_service.dart';
+import 'package:AgoraConnect/src/services/chat_service.dart';
 
-import 'package:chat_app/src/routes/routes.dart';
+import 'package:AgoraConnect/src/routes/routes.dart';
 
 void main() => runApp(const MyApp());
 
